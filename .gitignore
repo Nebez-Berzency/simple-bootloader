@@ -1,4 +1,12 @@
-/*
+# Ignore build artifacts
+/bin/
+
+# Ignore generated binaries
+*.bin
+
+# Keep source code
 !/src/
-!/bin/
-!.gitignor
+
+# Keep project files
+!.gitignore
+!README.md
