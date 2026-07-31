@@ -2,17 +2,30 @@
 
 A minimal x86 bootloader written in Assembly.
 
-This project is part of my low-level programming journey and is designed to help understand how the PC boot process works. It focuses on learning the fundamentals of BIOS, Real Mode, and bootloader development.
+This project is part of my low-level programming journey and is designed to help me understand how the PC boot process works, from BIOS to Real Mode execution.
 
 ---
 
 ## ✨ Features
 
-* Written in x86 Assembly (NASM)
-* BIOS bootable
-* Runs in Real Mode (16-bit)
-* Compatible with QEMU
-* Educational and beginner-friendly
+- Written in x86 Assembly (NASM)
+- Boots in 16-bit Real Mode
+- Uses BIOS interrupt `0x10` for screen output
+- Prints a simple message to the screen
+- Compatible with QEMU
+- Educational project
+
+---
+
+## 🎯 Learning Goals
+
+This project is built to explore and understand:
+
+- The PC boot process
+- BIOS services
+- x86 Real Mode programming
+- Memory layout during boot
+- Bootloader fundamentals
 
 ---
 
@@ -23,7 +36,6 @@ simple-bootloader/
 ├── src/
 │   └── boot.asm
 ├── bin/
-├── Makefile
 └── README.md
 ```
 
@@ -35,13 +47,13 @@ Follow these steps to build and run the project on your local machine.
 
 ### 📦 Prerequisites
 
-Install the required build tools and emulator.
+Install the required tools:
 
 #### Ubuntu / Debian
 
 ```bash
 sudo apt update
-sudo apt install nasm qemu-system-x86 make
+sudo apt install nasm qemu-system-x86
 ```
 
 ---
@@ -57,13 +69,7 @@ cd simple-bootloader
 
 ## 🔨 Build
 
-If you are using the Makefile:
-
-```bash
-make
-```
-
-Or compile manually with NASM:
+Compile the bootloader using NASM:
 
 ```bash
 nasm -f bin src/boot.asm -o bin/boot.bin
@@ -83,11 +89,11 @@ qemu-system-x86_64 -drive format=raw,file=bin/boot.bin
 
 ## 🗺️ Roadmap
 
-* Print colored text
-* Keyboard input
-* Memory detection
-* Simple command prompt
-* Basic file loading
+- [x] Boot from BIOS
+- [x] Print text using BIOS interrupt `0x10`
+- [ ] Print colored text
+- [ ] Handle keyboard input
+- [ ] Explore additional BIOS interrupts
 
 ---
 
@@ -95,9 +101,9 @@ qemu-system-x86_64 -drive format=raw,file=bin/boot.bin
 
 Copyright (c) 2026 Nebez Berzency
 
-This project is licensed under the **MIT License**.
+Licensed under the **MIT License**.
 
-Feel free to use, modify, and distribute it for educational purposes.
+Feel free to use, modify, and learn from this project.
 
 ---
 
