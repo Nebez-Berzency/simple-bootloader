@@ -1,49 +1,104 @@
+# Simple Bootloader
+
+A minimal x86 bootloader written in Assembly.
+
+This project is part of my low-level programming journey and is designed to help understand how the PC boot process works. It focuses on learning the fundamentals of BIOS, Real Mode, and bootloader development.
+
+---
+
+## ✨ Features
+
+* Written in x86 Assembly (NASM)
+* BIOS bootable
+* Runs in Real Mode (16-bit)
+* Compatible with QEMU
+* Educational and beginner-friendly
+
+---
+
+## 📁 Project Structure
+
+```text
+simple-bootloader/
+├── src/
+│   └── boot.asm
+├── bin/
+├── Makefile
+└── README.md
+```
+
+---
+
 ## 🚀 Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+Follow these steps to build and run the project on your local machine.
 
-### 📦 Prerequisites (Dependencies)
+### 📦 Prerequisites
 
-You need to install the **Build Tools** and the **Emulator**. Use the following commands based on your OS:
+Install the required build tools and emulator.
 
-#### On Ubuntu/Debian:
-```c
+#### Ubuntu / Debian
+
+```bash
 sudo apt update
 sudo apt install nasm qemu-system-x86 make
 ```
 
-🛠️ Step-by-Step Setup
-1. Clone the Repository
-First, you need to Clone the project to your local environment
+---
 
-```
-git clone git@github.com:Nebez-Berzency/simple-bootloader.git
-```
+## 📥 Clone the Repository
 
 ```bash
-cd my-first-bootloader
+git clone https://github.com/Nebez-Berzency/simple-bootloader.git
+cd simple-bootloader
 ```
 
-2. Assemble the Source Code
-In this step, we use NASM to compile the assembly code into a Raw Binary file. Run the following command:
+---
+
+## 🔨 Build
+
+If you are using the Makefile:
+
+```bash
+make
+```
+
+Or compile manually with NASM:
 
 ```bash
 nasm -f bin src/boot.asm -o bin/boot.bin
 ```
-Note: This creates the boot.bin artifact in the bin/ directory.
 
-3. Run in Emulator (Manual Execution)
-Now, you can manually boot your binary file using the QEMU Emulator:
+---
+
+## ▶️ Run
+
+Boot the generated binary with QEMU:
 
 ```bash
 qemu-system-x86_64 -drive format=raw,file=bin/boot.bin
 ```
 
+---
+
+## 🗺️ Roadmap
+
+* Print colored text
+* Keyboard input
+* Memory detection
+* Simple command prompt
+* Basic file loading
+
+---
+
 ## 📜 License
 
 Copyright (c) 2026 Nebez Berzency
 
-This project is licensed under the **MIT License**. It is free to use, modify, and distribute for educational purposes. 
+This project is licensed under the **MIT License**.
 
-> "Keep coding, keep building."
+Feel free to use, modify, and distribute it for educational purposes.
 
+---
+
+> Keep coding. Keep building. 🚀
