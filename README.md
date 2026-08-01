@@ -42,15 +42,17 @@ In this article, I explain my learning journey through:
 - Learning about CPU Registers and BIOS
 - Exploring the boot process
 - Writing and running my first bootloader
-```
 
-## 📁 Project Structure
+---
+
+
+
+### 📁 Project Structure
 
 ```text
 simple-bootloader/
 ├── src/
 │   └── boot.asm
-├── bin/
 └── README.md
 ```
 
