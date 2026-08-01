@@ -29,6 +29,21 @@ This project is built to explore and understand:
 
 ---
 
+
+## 📖 Article
+
+I wrote an article about my first experience building a bootloader from scratch:
+
+[Building a Bootloader from Scratch](https://dev.to/nebez/building-a-bootloader-from-scratch-53ea)
+
+In this article, I explain my learning journey through:
+
+- Understanding the x86 architecture
+- Learning about CPU Registers and BIOS
+- Exploring the boot process
+- Writing and running my first bootloader
+```
+
 ## 📁 Project Structure
 
 ```text
